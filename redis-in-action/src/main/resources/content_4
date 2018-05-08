@@ -1,0 +1,11 @@
+Based on the data type of a variable, the compiler allocates memory and decides what can be stored in the reserved memory. 
+Therefore, by assigning different data types to variables, you can store integers, decimals, or characters in these variables
+
+Fields are variables that belong to an object. 
+The fields are accessible from inside every method in the object. 
+Fields can also be accessible outside the object depending on what access modifiers the field is declared with. 
+Object fields can be both mutable or immutable types and can be defined using either var or val
+
+Method parameters are variables which are used to pass the value inside a method when the method is called. 
+Method parameters are only accessible from inside the method but the objects passed in may be accessible from the outside, 
+if you have a reference to the object from outside the method. Method parameters are always mutable and defined by val keyword

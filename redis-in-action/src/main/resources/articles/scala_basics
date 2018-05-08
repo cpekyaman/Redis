@@ -1,0 +1,158 @@
+If you have good understanding on Java then it will be very easy for you to learn Scala. 
+The biggest syntactic difference between Scala and Java is that the ; line end character is optional. 
+When we consider a Scala program it can be defined as a collection of objects that communicate via invoking each others methods. 
+Let us now briefly look into what do class, object, methods and instant variables mean.
+
+Object - Objects have states and behaviors. Example: A dog has states-color, name, breed as well as behaviors -wagging, barking, eating. An object is an instance of a class.
+
+Class - A class can be defined as a template/ blue print that describe the behaviors/states that object of its type support.
+
+Methods - A method is basically a behavior. A class can contain many methods. It is in methods where the logics are written, data is manipulated and all the actions are executed.
+
+Fields - Each object has its unique set of instant variables which are called fields. An object's state is created by the values assigned to these fields.
+
+First Scala Program:
+INTERACTIVE MODE PROGRAMMING:
+Invoking the interpreter without passing a script file as a parameter brings up the following prompt:
+
+C:\>scala
+Welcome to Scala version 2.9.0.1
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala>
+Type the following text to the right of the Scala prompt and press the Enter key:
+
+scala> println("Hello, Scala!");
+This will produce following result:
+
+Hello, Scala!
+SCRIPT MODE PROGRAMMING :
+Let us look at a simple code that would print the words Hello, World!.
+
+object HelloWorld {
+   /* This is my first java program.  
+    * This will print 'Hello World' as the output
+    */
+   def main(args: Array[String]) {
+      println("Hello, world!") // prints Hello World
+   }
+}
+Let's look at how to save the file, compile and run the program. Please follow the steps given below:
+
+Open notepad and add the code as above.
+
+Save the file as: HelloWorld.scala.
+
+Open a command prompt window and go o the directory where you saved the program file. Assume it is C:\>
+
+Type 'scalac HelloWorld.scala' and press enter to compile your code. If there are no errors in your code the command prompt will take you to the next line.
+
+Above command will generate a few class files in the current directory. One of them will be called HelloWorld.class. This is a bytecode which will run on Java Virtual Machine (JVM).
+
+Now type 'scala HelloWorld' to run your program.
+
+You will be able to see 'Hello, World!' printed on the window.
+
+C:\> scalac HelloWorld.scala
+C:\> scala HelloWorld
+Hello, World!
+Basic Syntax:
+About Scala programs, it is very important to keep in mind the following points.
+
+Case Sensitivity - Scala is case sensitive which means identifier Hello and hello would have different meaning in Scala.
+
+Class Names - For all class names the first letter should be in Upper Case. 
+
+If several words are used to form a name of the class each inner words first letter should be in Upper Case.
+
+Example class MyFirstScalaClass
+
+Method Names - All method names should start with a Lower Case letter. 
+
+If several words are used to form the name of the method, then each inner word's first letter should be in Upper Case.
+
+Example def myMethodName()
+
+Program File Name - Name of the program file should exactly match the object name. 
+
+When saving the file you should save it using the object name (Remember scala is case sensitive) and append '.scala' to the end of the name. (if the file name and the object name do not match your program will not compile).
+
+Example : Assume 'HelloWorld' is the object name. Then the file should be saved as 'HelloWorld.scala'
+
+def main(args: Array[String]) - Scala program processing starts from the main() method which is a mandatory part of every Scala Program.
+
+Scala Identifiers:
+All Scala components require names. Names used for objects, classes, variables and methods are called identifiers. A keyword cannot be used as an identifier and identifiers are case sensitive. There are following four type of identifiers supported by Scala:
+
+ALPHANUMERIC IDENTIFIERS
+An alphanumeric identifier starts with a letter or underscore, which can be followed by further letters, digits, or underscores. The '$' character is reserved keyword in Scala and should not be used in identifiers. Following are legal alphanumeric identifiers:
+
+age, salary, _value,  __1_value
+Following are illegal identifiers:
+
+$salary, 123abc, -salary
+OPERATOR IDENTIFIERS
+An operator identifier consists of one or more operator characters. Operator characters are printable ASCII characters such as +, :, ?, ~ or #. Following are legal operator identifiers:
+
++ ++ ::: <?> :>
+The Scala compiler will internally "mangle" operator identifiers to turn them into legal Java identifiers with embedded $ characters. For instance, the identifier :-> would be represented internally as $colon$minus$greater.
+
+MIXED IDENTIFIERS
+An mixed identifier consists of an alphanumeric identifier, which is followed by an underscore and an operator identifier. Following are legal mixed identifiers:
+
+unary_+,  myvar_=
+Here unary_+ used as a method name defines a unary + operator and myvar_= used as method name defines an assignment operator.
+
+LITERAL IDENTIFIERS
+An literal identifier is an arbitrary string enclosed in back ticks (` . . . `). Following are legal literal identifiers:
+
+`x` `<clinit>` `yield`
+Scala Keywords:
+The following list shows the reserved words in Scala. These reserved words may not be used as constant or variable or any other identifier names.
+
+abstract	case	catch	class
+def	do	else	extends
+false	final	finally	for
+forSome	if	implicit	import
+lazy	match	new	null
+object	override	package	private
+protected	return	sealed	super
+this	throw	trait	try
+true	type	val	var
+while	with	yield	 
+-	:	=	=>
+<-	<:	<%	>:
+#	@		
+Comments in Scala
+Scala supports single line and multi-line comments very similar to Java. Multi-line comments may be nested, but are required to be properly nested. All characters available inside any comment are ignored by Scala compiler.
+
+object HelloWorld {
+   /* This is my first java program.  
+    * This will print 'Hello World' as the output
+    * This is an example of multi-line comments.
+    */
+   def main(args: Array[String]) {
+      // Prints Hello World
+      // This is also an example of single line comment.
+      println("Hello, world!") 
+   }
+}
+Blank Lines and Whitespace:
+A line containing only whitespace, possibly with a comment, is known as a blank line, and Scala totally ignores it. Tokens may be separated by whitespace characters and/or comments.
+
+Newline Characters:
+Scala is a line-oriented language where statements may be terminated by semicolons (;) or newlines. A semicolon at the end of a statement is usually optional. You can type one if you want but you don.t have to if the statement appears by itself on a single line. On the other hand, a semicolon is required if you write multiple statements on a single line:
+
+val s = "hello"; println(s)
+Scala Packages:
+A package is a named module of code. For example, the Lift utility package is net.liftweb.util. The package declaration is the first non-comment line in the source file as follows:
+
+package com.liftcode.stuff
+Scala packages can be imported so that they can be referenced in the current compilation scope. The following statement imports the contents of the scala.xml package:
+
+import scala.xml._
+You can import a single class and object, for example, HashMap from the scala.collection.mutable package:
+
+import scala.collection.mutable.HashMap
+You can import more than one class or object from a single package, for example, TreeMap and TreeSet from the scala.collection.immutable package:

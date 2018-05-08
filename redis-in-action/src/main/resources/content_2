@@ -1,0 +1,13 @@
+The block with the case statements defines a function which maps integers to strings. 
+The match keyword provides a convenient way of applying a function (like the pattern matching function above) to an object. 
+Following is a second example which matches a value against patterns of different types
+
+The case classes are special classes that are used in pattern matching with case expressions. Syntactically, 
+these are standard classes with a special modifier: case. Following is a simple pattern matching example using case class
+
+Adding the case keyword causes the compiler to add a number of useful features automatically. 
+The keyword suggests an association with case expressions in pattern matching.
+
+First, the compiler automatically converts the constructor arguments into immutable fields (vals). 
+The val keyword is optional. If you want mutable fields, use the var keyword. 
+So, our constructor argument lists are now shorter
